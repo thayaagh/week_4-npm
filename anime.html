@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thayaagh trying Anime.js</title>
+    <script src="node_modules/animejs/lib/anime.min.js"></script>
+    <style>
+        .box {
+            /* Startgröße */
+            width: 50px;
+            /* Startgröße */
+            height: 50px;
+            /* Startfarbe */
+            background-color: #f00;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* Zentriere das Element sowohl horizontal als auch vertikal */
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+
+<div class="box"></div>
+
+<script>
+    anime({
+        targets: '.box',
+        // Vergrößere das Element auf das 20-fache seiner ursprünglichen Größe
+        scale: 20,
+        // Ändere die Farbe zu Blau
+        backgroundColor: '#3498db',
+        // Ändere die Form zu einem Kreis
+        borderRadius: ['0%', '50%'],
+        duration: 2000,
+        easing: 'easeInOutExpo',
+        loop: true
+    });
+</script>
+
+</body>
+</html>
